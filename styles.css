@@ -1,44 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Satisfy', cursive;
+    height: 100vh;
+    background-color: rgb(255, 214, 151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .calc {
-    border: 3px solid rgb(192, 164, 88);
-    background-color: rgba(210, 188, 126, 0.614);
-    padding: 10px;
+    border-radius: 6px;
+    border: 4px solid rgb(0, 50, 64);
+    background-color: rgb(116, 169, 183);
+    box-shadow: 10px 10px 15px 5px #003240;
+    padding:8px;
+    width: 351px;
+    height: 402px;
 }
 
 .display {
-    border: 3px solid black;
-    background-color: rgba(66, 66, 66, 0.5);
+    border-radius: 6px 6px 0 0;
+    font-size: 2.7em;
+    text-align: right;
+    border: 2px solid rgb(90, 90, 90);
+    border-bottom: none;
+    background-color: rgb(251, 251, 251);
     padding: 10px;
-    margin-bottom: 5px;
+    /* margin-bottom: 0px; */
+    height: 70px;
+    width: 327px;
 }
 
 .button-cont {
-    border: 3px solid rgb(37, 61, 244);
-    background-color: rgba(82, 95, 189, 0.5);
-    padding: 10px;
+    border-radius: 0 0 6px 6px;
+    width: 327px;
+    height: 308px;
+    border: 2px solid rgb(90, 90, 90);
+    background-color: rgb(90, 90, 90);
     display: flex;
-    gap: 5px;
-}
-
-.number-cont,
-.operator-cont {
-    border: 3px solid rgb(48, 170, 18);
-    background-color: rgba(99, 203, 73, 0.5);
-    padding: 10px;
-    margin-bottom: 5px;
-    flex: 1;
-    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    align-content: center;
+    gap: 1px;
 }
 
-.number,
-.operator {
-    border: 3px solid rgb(116, 74, 29);
-    background-color: rgba(129, 88, 46, 0.5);
-    margin-bottom: 5px;
-    width: 40px;
-    height: 40px;
+.number, .decimal, .pos-neg,
+.operator, #equal, #clear, #root {
+    font-size: 2.7em;
     text-align: center;
+    width: 80px;
+    height: 60px;
+}
+.number,
+.decimal,
+.pos-neg {
+    color: black;
+    background-color: rgb(230, 230, 230);
+}
+.operator,
+#equal,
+#clear,
+#root {
+    color: rgb(0, 164, 200);
+    background-color: rgb(200, 200, 200);
+}
+
+/* #cross  */
+/* #divide */
+/* #minus */
+#plus {
+    flex: 1;
+}
+#equal {
+    color: white;
+    background-color: rgb(74, 174, 78);
+    border-radius: 0 0 6px 0;
+}
+/* #clear */
+/* #root */
+
+#zero {
+    border-radius: 0 0 0 6px;
 }
