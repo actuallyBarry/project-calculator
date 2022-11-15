@@ -64,8 +64,6 @@ function operate() {
 // ===================  PUT NUMBERS TO DISPLAY  ======================
 display.textContent = '0';
 numberBtn.forEach(button => button.addEventListener('click', () => {
-    // button.classList.add('pressed');
-    // button.addEventListener('transitionend', () => button.classList.remove('pressed'));
     if (sign == 'equal') {
         inputs = [];
         sign = '';
@@ -105,8 +103,8 @@ opBtn.forEach(button => button.addEventListener('click', () => {
     disp.input = '';
     sign = button.id;
 
-    console.log(inputs);
-    console.log(sign);
+    // console.log(inputs);
+    // console.log(sign);
 }))
 
 // ==========================    = = =    ============================
@@ -114,8 +112,8 @@ equalBtn.addEventListener('click', () => {
     if (disp.input) operate();
     sign = 'equal';
 
-    console.log(inputs);
-    console.log(sign);
+    // console.log(inputs);
+    // console.log(sign);
 })
 
 // ==========================    c c c    ============================
