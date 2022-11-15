@@ -124,9 +124,14 @@ clearBtn.addEventListener('click', () => {
     sign = '';
 })
 
-// =============== TRANSITION BTN STYLE WHEN CLICKED =================
+// ===================================================================
 function stylePressed(e) {
     if (!e.target.id) return;
+    // ======== MAKE DISPLAY BLINK WHEN BTN IS CLICKED =====
+    display.classList.add('displayAction');
+    display.addEventListener('transitionend', () => display.classList.remove('displayAction'));
+
+    // ======== TRANSITION BTN's STYLE WHEN CLICKED ========
     const button = document.getElementById(`${e.target.id}`);
     button.classList.add('pressed');
 

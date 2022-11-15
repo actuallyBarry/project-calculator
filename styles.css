@@ -31,9 +31,12 @@ body {
     border-bottom: none;
     background-color: rgb(251, 251, 251);
     padding: 10px;
-    /* margin-bottom: 0px; */
     height: 70px;
     width: 327px;
+    transition: all .06s step-start;
+}
+.displayAction {
+    color: rgb(251, 251, 251);
 }
 
 .button-cont {
