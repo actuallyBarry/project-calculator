@@ -64,11 +64,13 @@ function operate() {
 // ===================  PUT NUMBERS TO DISPLAY  ======================
 display.textContent = '0';
 numberBtn.forEach(button => button.addEventListener('click', () => {
+    // button.classList.add('pressed');
+    // button.addEventListener('transitionend', () => button.classList.remove('pressed'));
     if (sign == 'equal') {
         inputs = [];
         sign = '';
     }
-    disp.input += button.classList[1];
+    disp.input += button.id;
     display.textContent = disp.input;
 }))
 
@@ -118,9 +120,18 @@ equalBtn.addEventListener('click', () => {
 
 // ==========================    c c c    ============================
 clearBtn.addEventListener('click', () => {
-    // document.location.reload()
     disp.input = '';
     display.textContent = '0';
     inputs = [];
     sign = '';
 })
+
+// =============== TRANSITION BTN STYLE WHEN CLICKED =================
+function stylePressed(e) {
+    if (!e.target.id) return;
+    const button = document.getElementById(`${e.target.id}`);
+    button.classList.add('pressed');
+
+    button.addEventListener('transitionend', () => button.classList.remove('pressed'));
+}
+window.addEventListener('click', stylePressed);
